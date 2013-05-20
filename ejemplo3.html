@@ -19,11 +19,8 @@
 	</div>
 	<div id="menu">
 		<ul>
-			<li onclick="mostrarLista()">Mis mascotas</li>
-			<li>Peru</li>
-			<li>Argentina</li>
-			<li>Chile</li>
-			<li>Uruguay</li>
+			<li>Mis mascotas</li>
+			<li>Nueva Mascota</li>
 		</ul>
 
 	</div>
@@ -40,17 +37,5 @@
 	<div id="pie">
 		esto es el pie
 	</div>
-
-	<script type="text/javascript">
-		function mostrarLista(){
-			$.ajax({
-				url : "listaAnimales.html",
-				type : "GET",
-				success: function(data){
-					$("#contenido").html(data);
-				}
-			});
-		}
-	</script>
 </body>
 </html>
