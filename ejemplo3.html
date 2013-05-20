@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Ejemplo Sublime Text</title>
+	<link rel="stylesheet" type="text/css" href="css/miestilo.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+<!-- Colores de acuerdo a la lista de mascotas, texto de la cabecera este centrada y su imagen este flotando a la derecha, (contenido,menu,pie) espacio interno 25px  -->	
+</head>
+<body>
+	<div id="cabecera">
+		<h1>Sistema de Mascotas</h1>
+
+		<a href="ejemplo2.html">
+			<img src="img/ironman_avatar.jpg" width="50" height="50" alt="Imagen de Ironman" title="Esta es una imagen de ironman">
+		</a>
+
+		
+	</div>
+	<div id="menu">
+		<ul>
+			<li onclick="mostrarLista()">Mis mascotas</li>
+			<li>Peru</li>
+			<li>Argentina</li>
+			<li>Chile</li>
+			<li>Uruguay</li>
+		</ul>
+
+	</div>
+	<div id="contenido">
+		<p>
+			<b>Lorem ipsum dolor sit amet</b>, <i>consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</i>
+		</p>
+	</div>
+	<div id="pie">
+		esto es el pie
+	</div>
+
+	<script type="text/javascript">
+		function mostrarLista(){
+			$.ajax({
+				url : "listaAnimales.html",
+				type : "GET",
+				success: function(data){
+					$("#contenido").html(data);
+				}
+			});
+		}
+	</script>
+</body>
+</html>

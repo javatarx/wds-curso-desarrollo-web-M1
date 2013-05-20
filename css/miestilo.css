@@ -1,0 +1,30 @@
+body{
+	color: white;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+}
+
+#cabecera{
+	background: red;
+}
+
+#menu{
+	background: yellow;
+	float: left;
+	width: 20%;
+}
+
+#contenido{
+	background: blue;
+	float: right;
+	width: 80%;
+}
+
+#pie{
+	background: green;
+	bottom: 0px;
+	height: 10%;
+	position: absolute;
+	width: 100%;
+}

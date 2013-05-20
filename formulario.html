@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Formulario</title>
+
+	<style type="text/css">
+
+	body{
+		background: #fefefe;
+		font-family: Arial;
+		font-size: 16px;
+		text-align: center;
+	}
+
+	input{
+		color : #98bf21;
+	}
+
+	table{
+		border-collapse: collapse;
+		margin: auto;
+	}
+
+	table tr td{
+		border: 1px solid #98bf21;
+		padding: 3px 10px ;
+		text-align: left;
+	}
+
+	table tr:nth-child(odd){
+		background: #EAF2D3;
+	}
+
+	table tr:nth-child(even){
+		background: #fdfdfd;
+	}
+
+	.boton{
+		background: #98bf21;
+		border-radius: 20px;
+		color: white;
+		cursor: pointer;
+		padding: 3px 10px;
+	}
+
+	.boton:hover{
+		background: yellow;
+		color: red;
+	}
+
+	.centrado{
+		text-align: center;
+	}
+
+	.titulo{
+		color: #A7C942;
+		text-shadow: 3px 3px 5px black;
+		-o-text-shadow: 3px 3px 5px black;
+		-moz-text-shadow: 3px 3px 5px black;
+		-webkit-text-shadow: 3px 3px 5px black;
+		-ms-text-shadow: 3px 3px 5px black;
+		text-transform: uppercase;
+	}
+
+	</style>
+</head>
+<body>
+	<form name="form1" action="listaAnimales.html" method="POST">
+		<h2 class="titulo">Formulario de Mascota</h2>
+		<table>
+			<tr>
+				<td>Nombre:</td>
+				<td><input type="text" autofocus placeholder="Ingrese su nombre" name="nombre" >
+				</td>
+			</tr>
+			<tr>
+				<td>DNI: 
+				</td>
+				<td><input type="text" size="8" name="dni" maxlength="8" ></td>
+			</tr>
+			<tr>
+				<td>Fecha Nacimiento: 
+				</td>
+				<td><input type="date" name="dni"></td>
+			</tr>
+			<tr>
+				<td>Sexo: </td>
+				<td><input type="radio" name="sexo" value="M">Macho
+			<input type="radio" name="sexo" value="H">Hembra</td>
+			</tr>
+			<tr>
+				<td>Tipo:</td>
+				<td><select name="tipo_mascota">
+				<option value="perro">Perro</option>
+				<option value="gato">Gato</option>
+				<option value="lagarto">Lagarto</option>
+				<option value="conejo">Conejo</option>
+			</select></td>
+			</tr>
+			<tr>
+				<td>Descripcion</td>
+				<td><textarea cols="20" rows="10">
+			</textarea></td>
+			</tr>
+			<tr>
+				<td class="centrado" colspan="2">
+					<input  class="boton" type="submit" value="Continuar">
+			<input class="boton" type="reset" value="Cancelar">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
