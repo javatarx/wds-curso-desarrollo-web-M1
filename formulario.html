@@ -64,6 +64,15 @@
 	}
 
 	</style>
+	<script type="text/javascript">
+
+		$("#btnContinuar").on("click",function(){
+
+			$("#lista_mascotas").append($("<li>").text($("#nombre").val()));
+
+		});
+
+	</script>
 </head>
 <body>
 	<form name="form1" action="listaAnimales.html" method="POST">
@@ -71,7 +80,7 @@
 		<table>
 			<tr>
 				<td>Nombre:</td>
-				<td><input type="text" autofocus placeholder="Ingrese su nombre" name="nombre" >
+				<td><input type="text" autofocus placeholder="Ingrese su nombre" name="nombre" id="nombre">
 				</td>
 			</tr>
 			<tr>
@@ -105,11 +114,12 @@
 			</tr>
 			<tr>
 				<td class="centrado" colspan="2">
-					<input  class="boton" type="submit" value="Continuar">
+					<input  class="boton" type="button" value="Continuar" id="btnContinuar">
 			<input class="boton" type="reset" value="Cancelar">
 				</td>
 			</tr>
 		</table>
 	</form>
+	<ul id="lista_mascotas"></ul>
 </body>
 </html>

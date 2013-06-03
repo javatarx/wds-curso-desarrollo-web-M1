@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Registro de tareas</title>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+		function inicio(){
+			$("#btn").on("click", function(){
+				$("#lista_tareas").append($("<li>").text($("#nombre").val()+" - "+$("#edad").val()).on("dblclick",function(){
+					if(confirm("Realizo la tarea "+$(this).text())){
+						$(this).remove();
+					}
+					
+				}));
+				$("#nombre").val("").focus();
+				$("#edad").val("");
+
+			} );
+
+			$("#btnToggle").on("click",function(){
+				$("#lista_tareas").slideToggle();
+			});
+		}
+
+		$(document).on("ready",inicio);
+
+	</script>
+
+</head>
+<body>
+	<input id="nombre" type="text" placeholder="Ingrese el nombre" autofocus>
+	<input id="edad" type="text" placeholder="Ingrese la edad">
+	<input type="button" id="btn" value="Registrar">
+	<input type="button" id="btnToggle" value="Toggle">
+	<ul id="lista_tareas"></ul>
+	<div>Si usted ya realizo la tarea, la puede eliminar haciendo doble click en ella</div>
+</body>
+</html>

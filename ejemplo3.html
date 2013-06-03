@@ -5,7 +5,21 @@
 	<title>Ejemplo Sublime Text</title>
 	<link rel="stylesheet" type="text/css" href="css/miestilo.css">
 <link rel="stylesheet" type="text/css" href="css/estilo.css">
-
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+	function cargarAlgo(aUrl){
+		$.ajax({
+		url : aUrl,
+		type : "GET",
+		success : function(datos){
+			$("#contenido").html(datos);
+		},
+		error : function(){
+			$("#contenido").html("No se encontro datos");	
+		}
+});
+	}
+</script>
 <!-- Colores de acuerdo a la lista de mascotas, texto de la cabecera este centrada y su imagen este flotando a la derecha, (contenido,menu,pie) espacio interno 25px  -->	
 </head>
 <body>
@@ -20,57 +34,12 @@
 	</div>
 	<div id="menu">
 		<ul>
-			<li>Argentina</li>
-			<li>Chile</li>
-			<li>Colombia</li>
-			<li>Perú</li>
-			<li>Uruguay</li>
+			<li onclick="cargarAlgo('formulario.html')">Nueva Mascota</li>
+			<li onclick="cargarAlgo('listaAnimales.html')">Lista de mascotas</li>
 		</ul>
 
 	</div>
 	<div id="contenido">
-		<table>
-		<caption>Ranking de mis mascotas</caption>
-		<tr>
-			<th>#</th>
-			<th>Animal</th>
-			<th>Nombre</th>
-			<th>Imagen</th>
-			<th>Ptos</th>
-		</tr>
-		<tr>
-			<td>1</td>
-			<td>Gato</td>
-			<td>Miau</td>
-			<td>
-				<a href="img/ironman.gif" target="_blank">
-					<img src="img/ironman.gif" width="25">
-				</a>
-			</td>
-			<td>2</td>
-		</tr>
-		<tr>
-			<td>2</td>
-			<td>Perro</td>
-			<td>Guau</td>
-			<td><a href="img/ironman.gif" target="_blank"><img src="img/ironman.gif" width="25"></a></td>
-			<td>1</td>
-		</tr>
-		<tr>
-			<td>3</td>
-			<td>Raton</td>
-			<td>Perez</td>
-			<td><a href="img/ironman.gif" target="_blank"><img src="img/ironman.gif" width="25"></a></td>
-			<td>1</td>
-		</tr>
-		<tr>
-			<td>4</td>
-			<td>Lagarto</td>
-			<td>Walter</td>
-			<td><a href="img/ironman.gif" target="_blank"><img src="img/ironman.gif" width="25"></a></td>
-			<td>2</td>
-		</tr>
-	</table>
 		<!--
 		<p>
 			<b>Lorem ipsum dolor sit amet</b>, <i>consectetur adipisicing elit, sed do eiusmod

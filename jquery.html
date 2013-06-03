@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+	function inicio(){
+		$("#btn").on("click",function(){
+			$(".lista").append($("<li>").text(
+				$("#nom_mascota").val()
+				).click(
+					function(){alert("Hola");})
+				);
+		});
+	}
+		$(document).on("ready",inicio);
+
+	</script>
+</head>
+<body>
+	<input placeholder="Ingrese el nombre de la mascota" type="text" id="nom_mascota">
+	<input type="button" id="btn" value="Añadir">
+	<ul id="lista" class="lista">
+		<li>Lulu</li>
+		<li>Marley</li>
+		<li>Cumac</li>
+		<li>Pepito</li>
+	</ul>
+</body>
+</html>
